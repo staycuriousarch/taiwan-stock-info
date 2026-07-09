@@ -1,0 +1,15 @@
+[project]
+name = "financial-info-backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "apscheduler>=3.11.3",
+    "duckdb>=1.5.4",
+    "fastapi[standard]>=0.139.0",
+    "httpx>=0.28.1",
+    "pandas>=3.0.3",
+    "pydantic-settings>=2.14.2",
+    "pytz>=2026.2",
+]

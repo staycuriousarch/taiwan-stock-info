@@ -1,0 +1,46 @@
+# === 參考資料（保留本機、不納入版控）===
+/API.md
+/resource/
+
+# === 機密（絕不提交）===
+.env
+.env.*
+!.env.example
+
+# === Python（backend）===
+__pycache__/
+*.py[oc]
+.venv/
+build/
+wheels/
+*.egg-info/
+
+# === Node（frontend）===
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# === 資料 / 快取（自動生成）===
+data/
+*.duckdb
+*.duckdb.wal
+
+# === 測試暫存輸出 ===
+smoke_out.json
+smoke_err.txt
+
+# === 記錄檔 ===
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# === 編輯器 / OS ===
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.sw?

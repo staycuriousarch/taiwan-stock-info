@@ -1,0 +1,10 @@
+.venv
+data
+__pycache__
+*.pyc
+.env
+.git
+smoke_test.py
+http_test.py
+smoke_out.json
+smoke_err.txt

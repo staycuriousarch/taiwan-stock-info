@@ -1,0 +1,7 @@
+# 跨平台換行一致：文字檔統一用 LF，避免不同機器 clone 產生無謂 diff
+* text=auto eol=lf
+
+# 二進位檔不做轉換
+*.png binary
+*.svg text
+*.duckdb binary

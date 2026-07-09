@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# 機密與快取資料
+.env
+data/
+*.duckdb
+*.duckdb.wal
+
+# 測試暫存輸出
+smoke_out.json
+smoke_err.txt
