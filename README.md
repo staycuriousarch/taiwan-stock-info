@@ -6,6 +6,19 @@
 - 後端：FastAPI + DuckDB 快取 + APScheduler 每日更新
 - 前端：React + Vite + TypeScript + lightweight-charts K 線圖
 
+## 專案結構
+
+| 目錄 | 內容 |
+|---|---|
+| `backend/` | 個股查詢 API（FastAPI + FinMind） |
+| `frontend/` | 前端網站（React + Vite） |
+| `el/` | **第二階段**：全市場資金流 pipeline 的 EL 層（見 [`el/README.md`](el/README.md)） |
+
+第二階段要做個股熱力圖與產業資金流泡泡圖，需要**全市場橫切面**資料。
+FinMind 免費層不支援不帶 `data_id` 的批次查詢（會回 HTTP 400），因此
+改走證交所／櫃買的開放資料，並獨立成 `el/` 專案；`backend/` 的個股查詢
+管線維持原樣、不受影響。
+
 ## 方式一：Docker Compose（一鍵啟動）
 
 需先安裝 [Docker Desktop](https://www.docker.com/products/docker-desktop/)。

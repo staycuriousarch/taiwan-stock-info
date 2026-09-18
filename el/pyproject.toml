@@ -1,0 +1,21 @@
+[project]
+name = "financial-info-el"
+version = "0.1.0"
+description = "台股資金流 pipeline：EL 層（抓取＋落地）。獨立於 backend/，只依賴 requests + duckdb，供本機／GitHub Actions／Snowpark 三種 runner 共用。"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32.3",
+    "duckdb>=1.5.4",
+]
+
+# Snowflake 連線刻意設成選用依賴。core/sources.py 只用 requests，才能原封
+# 不動搬進 Snowpark stored procedure（Snowpark 的套件來源限 Snowflake 的
+# Anaconda channel，httpx 與 snowflake-connector 都不該混進共用層）。
+#   本機開發：uv sync
+#   落地 Snowflake：uv sync --extra snowflake
+[project.optional-dependencies]
+snowflake = [
+    "snowflake-connector-python>=3.12.0",
+    "cryptography>=43.0.0",
+]
